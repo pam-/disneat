@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
       Restaurant.all
     end 
   end
+
+  def sufficient_height
+    # if self.height < 
+    #   Ride.where(serv)
+    # else
+    #   Ride.all
+    # end 
+  end
 end
