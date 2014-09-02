@@ -1,5 +1,9 @@
 <ul>
-<% @restaurants.each do |r| %>
- <li><%= r.name %></li>
- <% end %>   
+<% @restaurants.find_all do |r| %>
+<% if @user.age < 18 %>
+ 	<li> <%= r.name if r.serves_alcohol == false %> </li>
+<% else %> 
+ 	<li> <%= r.name if r.serves_alcohol == true %> </li>
+ 	<% end %>
+<% end %>   
 </ul>
